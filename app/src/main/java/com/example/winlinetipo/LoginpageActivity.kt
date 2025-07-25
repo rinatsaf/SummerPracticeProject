@@ -36,7 +36,7 @@ class LoginActivity : AppCompatActivity() {
             lifecycleScope.launch {
                 val user = userDao.getUserByEmail(email)
                 if (user != null) {
-                    startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+                    startActivity(Intent(this@LoginActivity, ProfileActivity::class.java))
                     finish()
                 } else {
                     Toast.makeText(this@LoginActivity, "Неверные данные", Toast.LENGTH_SHORT).show()

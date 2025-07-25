@@ -10,7 +10,7 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        // Пример: запуск асинхронной операции при старте
+
         CoroutineScope(Dispatchers.IO).launch {
             val dao = AppDatabase.getDatabase(applicationContext).userDao()
             val users = dao.getAllUsers()
