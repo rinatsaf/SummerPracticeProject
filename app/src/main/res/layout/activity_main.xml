@@ -15,7 +15,7 @@
         android:id="@+id/btnProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/profile"
+        android:contentDescription=".ProfileActivity"
         android:src="@android:drawable/ic_menu_myplaces"
         app:layout_anchorGravity="bottom|end"
         app:layout_anchor="@id/recyclerView"

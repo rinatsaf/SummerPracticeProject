@@ -38,7 +38,7 @@
             android:name=".BetDetailActivity" />
 
         <activity
-            android:name=".MainActivity">
+            android:name=".MainActivity" />
 
     </application>
 
