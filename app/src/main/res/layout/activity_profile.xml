@@ -11,7 +11,7 @@
     <ImageView
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:src="@drawable/ic_profile"
+        android:src="@drawable/ic_avatar"
         android:layout_gravity="center_horizontal"
         android:contentDescription="Avatar" />
 
@@ -29,13 +29,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:background="#D0D0D0"
+        android:background="@drawable/rounded_button"
         android:padding="12dp">
 
         <TextView
             android:id="@+id/balanceTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
             android:text="Баланс: 1000 ₽"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -45,7 +46,7 @@
             android:id="@+id/addBalanceButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_input_add"
+            android:src="@drawable/ic_plus"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
@@ -63,51 +64,60 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
             android:text="История пари"
-            style="@style/Widget.AppCompat.Button.Borderless" />
+            android:layout_marginBottom="8dp"/>
+
 
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
             android:text="Личные данные"
-            style="@style/Widget.AppCompat.Button.Borderless" />
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
             android:text="История операций"
-            style="@style/Widget.AppCompat.Button.Borderless" />
+            android:layout_marginBottom="8dp"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
             android:text="Служба поддержки"
-            style="@style/Widget.AppCompat.Button.Borderless" />
+            android:layout_marginBottom="8dp"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
             android:text="Документы"
-            style="@style/Widget.AppCompat.Button.Borderless" />
+            android:layout_marginBottom="8dp"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
             android:text="Клубы"
-            style="@style/Widget.AppCompat.Button.Borderless" />
+            android:layout_marginBottom="8dp"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
             android:text="Настройки"
-            style="@style/Widget.AppCompat.Button.Borderless" />
+            android:layout_marginBottom="8dp"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Выход"
-            style="@style/Widget.AppCompat.Button.Borderless" />
+            android:background="@drawable/rounded_button"
+            android:text="Выход" />
     </LinearLayout>
 
 </LinearLayout>
