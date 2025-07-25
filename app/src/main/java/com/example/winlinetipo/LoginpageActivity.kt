@@ -13,7 +13,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
 import com.example.data.AppDatabase
-import com.example.data.MainActivity
 import com.example.data.UserDao
 import kotlinx.coroutines.launch
 
@@ -35,8 +34,14 @@ class LoginActivity : AppCompatActivity() {
 
             lifecycleScope.launch {
                 val user = userDao.getUserByEmail(email)
-                if (user != null) {
-                    startActivity(Intent(this@LoginActivity, ProfileActivity::class.java))
+                if (user != null && user.password == password) { // проверь пароль!
+                    // Инициализируем BalanceManager один раз
+                    BalanceManager.init(applicationContext, user.id)
+
+                    // Переход в главное меню
+                    val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                    intent.putExtra("userId", user.id) // <-- обязательно передай, если MainActivity использует userId
+                    startActivity(intent)
                     finish()
                 } else {
                     Toast.makeText(this@LoginActivity, "Неверные данные", Toast.LENGTH_SHORT).show()
