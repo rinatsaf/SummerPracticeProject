@@ -7,4 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="main_bg">#EEE6FB</color>
+    <color name="card_bg">#D2C2F0</color>
+    <color name="odds_bg">#E1E1E1</color>
+    <color name="green_button">#29D933</color>
+    <color name="bottom_nav_icon_active">#362E4C</color>
 </resources>
