@@ -8,6 +8,8 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
 import kotlin.math.roundToLong
 
 class PlaceBetActivity : AppCompatActivity() {
@@ -43,16 +45,16 @@ class PlaceBetActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            val success = BalanceManager.deduct(amount)
-            if (success) {
-                Toast.makeText(
-                    this,
-                    "Пари заключено! Потенциальный выигрыш: ${calcPotentialBet().roundToLong()}",
-                    Toast.LENGTH_LONG
-                ).show()
-                finish()
-            } else {
-                Toast.makeText(this, "Недостаточно средств", Toast.LENGTH_SHORT).show()
+            lifecycleScope.launch {
+                val ok = BalanceManager.deduct(amount)
+                if (ok) {
+                    Toast.makeText(this@PlaceBetActivity,
+                        "Пари заключено! Выигрыш: ${calcPotentialBet().roundToLong()} ₽",
+                        Toast.LENGTH_LONG).show()
+                    finish()
+                } else {
+                    Toast.makeText(this@PlaceBetActivity, "Недостаточно средств", Toast.LENGTH_SHORT).show()
+                }
             }
         }
     }
