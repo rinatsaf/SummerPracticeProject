@@ -1,4 +1,4 @@
-package com.yourpackage
+package com.example.winlinetipo
 
 import android.app.Application
 import com.example.data.AppDatabase
