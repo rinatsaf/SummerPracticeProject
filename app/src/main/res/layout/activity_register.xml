@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    android:layout_height="match_parent">
 
     <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:gravity="center"
         android:padding="16dp">
 
         <EditText
@@ -44,7 +45,7 @@
             android:id="@+id/btnRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Завершить регистрацию"/>
+            android:text="Завершить регистрацию" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

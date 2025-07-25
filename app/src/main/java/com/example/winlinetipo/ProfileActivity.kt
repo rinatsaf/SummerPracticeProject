@@ -13,7 +13,7 @@ class ProfileActivity : AppCompatActivity() {
         setContentView(R.layout.activity_profile)
 
         val balanceTextView = findViewById<TextView>(R.id.balanceTextView)
-        // Пример установки баланса
+
         balanceTextView.text = "Баланс: 1000 ₽"
         val addBalanceButton: ImageButton = findViewById(R.id.addBalanceButton)
         addBalanceButton.setOnClickListener {
