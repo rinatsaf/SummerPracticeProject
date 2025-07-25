@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/bet_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/button_create_bet"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/green_button"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Создать ставку"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@id/button_profile"
+        android:layout_marginEnd="16dp"/>
+
+    <Button
+        android:id="@+id/button_profile"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/green_button"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Профиль"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
